@@ -1,0 +1,379 @@
+<header class="bg-transparent fixed transition-transform top-0 left-0 w-full z-50 duration-500"
+  [class.-translate-y-full]="!isVisible"
+  [ngClass]="{'active' : Menus.Product, 'bg-white': Menus.Product || Menus.Mundo, 'bg-transparent': !(Menus.Product || Menus.Mundo)}">
+  <div #headerRoot class="grid grid-cols-[1fr_auto_1fr] mb-5 items-center justify-between">
+    <div class="m-1 ml-3 flex items-center space-x-5 justify-start">
+      <nav class="s-MenuProducts" tabindex="-1"></nav>
+      <button (click)="toggleMenu('Product')"
+        class="flex text-white hover:text-green-400 items-center hover:scale-125 cursor-pointer transition-all duration-250">
+        <span routerLink="/about" class="relative text-lg hover:text-green-400 text-white inline-block menu-label"
+          [ngClass]="{ 'active': Menus.Product, 'text-black': Menus.Product || Menus.Mundo, 'text-white': !(Menus.Product || Menus.Mundo)}">
+          Producto </span>
+        <svg class="w-4 h-4 mt-1 transition-all duration-250"
+          [ngClass]="{ 'rotate-180':  Menus.Product, 'rotate-0': !Menus.Product, 'text-black': Menus.Product || Menus.Mundo, 'text-white': !(Menus.Product || Menus.Mundo)}"
+          viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z"
+            fill="currentColor" />
+        </svg>
+      </button>
+      <div class="absolute bg-white top-full left-0 w-full h-max overflow-hidden transition-all duration-500 "
+        [ngClass]="{
+
+        'max-h-0 opacity-0': !Menus.Product,
+        'max-h-130 opacity-100': Menus.Product,
+
+      }">
+        <div class="items-start gap-8 px-5 w-full grid grid-cols-[auto_auto_auto]">
+          <div class="pt-10 col-start-1">
+            <h3 class="figtree-header-title text-3xl mb-8" style="color: #809D04">
+              Categorias </h3>
+            <ul class="grid grid-cols-2 border-dashed border-r-1 border-gray-500">
+              <li class="pl-2 md:pl-0 py-0.5 md:py-1">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Galletas</a>
+              </li>
+              <li class="pl-2 md:pl-0 py-0.5 md:py-1">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Barras y snacks
+                  dulces</a>
+              </li>
+              <li class="pl-2 md:pl-0 py-0.5 md:py-1">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Biscochos
+                  tostados</a>
+              </li>
+              <li class="pl-2 md:pl-0 py-0.5 md:py-1">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Jugos de
+                  frutas</a>
+              </li>
+              <li class="pl-2 md:pl-0 py-0.5 md:py-1">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Condimentos</a>
+              </li>
+              <li class="pl-2 md:pl-0 py-0.5 md:py-1">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Preparaciones y
+                  harinas</a>
+              </li>
+              <li class="pl-2 md:pl-0 py-0.5 md:py-1">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Sustitutos del
+                  cafe</a>
+              </li>
+              <li class="pl-2 md:pl-0 py-0.5 md:py-1">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Productos
+                  frescos
+                  preparados</a>
+              </li>
+              <li class="pl-2 md:pl-0 py-0.5 md:py-1">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Aperitivos</a>
+              </li>
+              <li class="pl-2 md:pl-0 py-0.5 md:py-1">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Cereales</a>
+              </li>
+              <li class="pl-2 md:pl-0 py-0.5 md:py-1">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Sustitutos del
+                  pan y aperitivos salados</a>
+              </li>
+              <li class="pl-2 md:pl-0 py-0.5 md:py-1">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Alimentos para
+                  bebes y niños</a>
+              </li>
+              <li class="pl-2 md:pl-0 py-0.5 md:py-1">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Compotas y
+                  untables</a>
+              </li>
+              <li class="pl-2 md:pl-0 py-0.5 md:py-1">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Pastas</a>
+              </li>
+              <li class="pl-2 md:pl-0 py-0.5 md:py-1">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Dulces
+                  tradicionales</a>
+              </li>
+            </ul>
+            <div class="pt-8">
+              <button (click)="navigateToProducts()"
+                class="bg-transparent border rounded-full text-black px-4 py-2 tracking-widest hover:scale-105 col-start-1 cursor-pointer border-gray-500 uppercase transition-all duration-250">
+                ver todo
+              </button>
+            </div>
+          </div>
+          <div class="py-10 col-start-2">
+            <h3 class="figtree-header-title text-3xl mb-8" style="color: #809D04;">
+              Caracteristicas </h3>
+            <ul>
+              <li class="pl-2 md:pl-0 py-0.5 md:py-1">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Sin gluten</a>
+              </li>
+              <li class="pl-2 md:pl-0 py-0.5 md:py-1">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Sin
+                  levadura</a>
+              </li>
+              <li class="pl-2 md:pl-0 py-0.5 md:py-1">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Ingredientes
+                  100%
+                  vegetales</a>
+              </li>
+              <li class="pl-2 md:pl-0 py-0.5 md:py-1">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Sin azucares
+                  añadidos</a>
+              </li>
+              <li class="pl-2 md:pl-0 py-0.5 md:py-1">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Sin lactosa</a>
+              </li>
+              <li class="pl-2 md:pl-0 py-0.5 md:py-1">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Sin huevos</a>
+              </li>
+            </ul>
+          </div>
+          <div class="relative ">
+            <div class="min-h-96 h-full">
+              <a class="group p-5 block w-full h-120">
+                <p class="relative z-20 text-2xl leading-tight ranchers-regular text-white">
+                  Todo el sabor que quieras
+                </p>
+                <h4 class="text-6xl relative z-20 text-white uppercase drop-shadow-xl leading-tight ranchers-regular">
+                  sin gluten
+                </h4>
+                <div
+                  class="rounded-lg overflow-hidden cursor-pointer absolute z-9 top-3 left-3 h-114 w-full block duration-700 transition-transform group-hover:scale-[.98] bg-white">
+                  <span class="absolute z-10 inset-0 bg-gradient-to-b from-black/80 to-black/0 w-full h-1/2"></span>
+                  <figure class="block transition-transform duration-500 group-hover:scale-[1.07] h-full">
+                    <img src="assets/images/HeaderImages/HeaderImage.png"
+                      class="min-h-96 z-0 absolute top-0 left-0 w-full h-full box-border object-cover object-center"
+                      alt="alimentos orgánicos sin gluten">
+                  </figure>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button (click)="toggleMenu('Mundo')"
+        class="hover:text-green-400 text-white flex items-center hover:scale-125 cursor-pointer transition-all duration-500">
+        <span routerLink="/about" class="hover:text-green-400 text-white text-lg relative inline-block menu-label"
+          [ngClass]="{ 'active': Menus.Mundo, 'text-black': Menus.Product || Menus.Mundo, 'text-white': !(Menus.Product || Menus.Mundo)}">
+          Mundo GerminalBio</span>
+        <svg class="w-4 h-4 mt-1 transition-all duration-250"
+          [ngClass]="{'rotate-180': Menus.Mundo, 'rotate-0': !Menus.Mundo, 'text-black': Menus.Product || Menus.Mundo, 'text-white': !(Menus.Product || Menus.Mundo)}"
+          viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z"
+            fill="currentColor" />
+        </svg>
+      </button>
+      <div class="absolute bg-white top-full left-0 w-full h-max overflow-hidden transition-all duration-250 "
+        [ngClass]="{
+
+        'max-h-0 opacity-0': !Menus.Mundo,
+        'max-h-max opacity-100': Menus.Mundo
+
+      }">
+        <div class="items-start gap-24 px-10 w-full grid grid-cols-[auto_auto_auto_auto]">
+          <div class="pt-10 col-start-1">
+            <h4 class="items-center text-5xl mb-8" style="color: #809D04" ;>
+              Agencia </h4>
+            <ul class="grid grid-cols-1 border-dashed border-r-1 border-gray-500">
+              <li class="pl-2 md:pl-0 py-0.5 md:py-2">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Quienes
+                  somos</a>
+              </li>
+              <li class="pl-2 md:pl-0 py-0.5 md:py-2">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Historia</a>
+              </li>
+              <li class="pl-2 md:pl-0 py-0.5 md:py-2">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Calidad</a>
+              </li>
+            </ul>
+          </div>
+          <div class="pt-10 col-start-2">
+            <h4 class="text-5xl mb-8" style="color: #809D04" ;>
+              Sostenibilidad </h4>
+            <ul class="grid grid-cols-1 border-dashed border-r-1 border-gray-500">
+              <li class="pl-2 md:pl-0 py-0.5 md:py-2">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Embalaje
+                  ecológico</a>
+              </li>
+              <li class="pl-2 md:pl-0 py-0.5 md:py-2">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Las cadenas de
+                  suministro</a>
+              </li>
+              <li class="pl-2 md:pl-0 py-0.5 md:py-2">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Empresa B</a>
+              </li>
+            </ul>
+          </div>
+          <div class="pt-10 col-start-3">
+            <h4 class="text-5xl mb-8" style="color: #809D04" ;>
+              Revista </h4>
+            <ul class="grid grid-cols-1">
+              <li class="pl-2 md:pl-0 py-0.5 md:py-2">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Recetas</a>
+              </li>
+              <li class="pl-2 md:pl-0 py-0.5 md:py-2">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Biografía de
+                  Casa
+                  Germinal</a>
+              </li>
+              <li class="pl-2 md:pl-0 py-0.5 md:py-2">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Curiosidad</a>
+              </li>
+              <li class="pl-2 md:pl-0 py-0.5 md:py-2">
+                <a class="cursor-pointer relative inline-block menu-label duration-300 transition-all">Nuestros
+                  ingredientes</a>
+              </li>
+            </ul>
+          </div>
+          <div class="relative col-start-4 ">
+            <div class="min-h-96 h-full">
+              <a class="group p-5 block w-full h-90">
+                <p class="relative z-20 text-3xl leading-tight ranchers-regular text-white">
+                  embalaje
+                </p>
+                <h4 class="text-6xl relative z-20 text-white uppercase drop-shadow-xl leading-tight ranchers-regular">
+                  ecosostenible
+                </h4>
+                <div
+                  class="rounded-lg overflow-hidden absolute cursor-pointer z-9 top-3 left-0 h-90 w-full block duration-700 transition-transform group-hover:scale-[.98] bg-white">
+                  <span class="absolute z-10 inset-0 bg-gradient-to-b from-black/80 to-black/0 w-full h-1/2"></span>
+                  <figure class="block transition-transform duration-500 group-hover:scale-[1.07] h-full">
+                    <img src="assets/images/HeaderImages/HeaderImage2.png"
+                      class="min-h-96 z-0 absolute top-0 left-0 w-full h-full box-border object-cover object-center"
+                      alt="alimentos orgánicos sin gluten">
+                  </figure>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span routerLink="/about"
+        class="hover:text-green-400 text-white text-lg relative inline-block menu-label cursor-pointer"
+        [ngClass]="{ 'active': Menus.Contact, 'text-black': Menus.Product || Menus.Mundo, 'text-white': !(Menus.Product || Menus.Mundo)}">
+        Contactos</span>
+    </div>
+    <div class="flex justify-center cursor-pointer hover:scale-110 transition-all ease-in-out duration-250">
+      <a routerLink="/">
+        <img src="assets/images/HeaderImages/LogoMain.png" alt="Germinal Logo" class="h-25 w-auto rounded-lg">
+      </a>
+    </div>
+    <div class="relative flex items-center space-x-2 justify-end">
+      <button id="dropdownDefaultButton" (click)="toggleMenu('Lang')"
+        class="inline-flex items-center justify-center bg-transparent text-white px-4 py-2 tracking-widest cursor-pointer hover:scale-105 transition-all duration-250"
+        [ngClass]="{ 'active': Menus.Lang, 'border-black': Menus.Product || Menus.Mundo, 'border-white/50': !(Menus.Product || Menus.Mundo), 'text-black': Menus.Product || Menus.Mundo, 'text-white': !(Menus.Product || Menus.Mundo)}"
+        type="button">
+        En
+        <svg class="w-4 h-4 mt-1 transition-all hover hover:scale-105 duration-300"
+          [ngClass]="{ 'rotate-180':  Menus.Lang, 'rotate-0': !Menus.Lang, 'text-black': Menus.Product || Menus.Mundo, 'text-white': !(Menus.Product || Menus.Mundo)}"
+          viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z"
+            fill="currentColor" />
+        </svg>
+      </button>
+      <div
+        class="absolute top-9 bg-white rounded-xl px-3 py-2 gap-y-2 flex flex-col md:left-80 transition-all duration-300"
+        [ngClass]="{
+
+        'max-h-0 opacity-0': !Menus.Lang,
+        'max-h-130 opacity-100': Menus.Lang,
+
+      }">
+        <ul class="p-2 text-sm font-medium" aria-labelledby="dropdownDefaultButton">
+          <li>
+            <a href="#"
+              class="inline-flex items-center w-full p-2 hover:bg-gray-100 hover:scale-105 rounded-lg transition-all duration-300">English</a>
+          </li>
+          <li>
+            <a href="#"
+              class="inline-flex items-center w-full p-2 hover:bg-gray-100 hover:scale-105 rounded-lg transition-all duration-300">Español</a>
+          </li>
+          <li>
+            <a href="#"
+              class="inline-flex items-center w-full p-2 hover:bg-gray-100 hover:scale-105 rounded-lg transition-all duration-300">Français</a>
+          </li>
+          <li>
+            <a href="#"
+              class="inline-flex items-center w-full p-2 hover:bg-gray-100 hover:scale-105 rounded-lg transition-all duration-300">Português</a>
+          </li>
+        </ul>
+      </div>
+      <button
+        class="bg-transparent border rounded-full px-4 py-2 tracking-widest hover:bg-white/20  hover:border-white/0 cursor-pointer uppercase transition-all duration-250"
+        [ngClass]="{ 'active': Menus.Contact, 'border-black': Menus.Product || Menus.Mundo, 'border-white/50': !(Menus.Product || Menus.Mundo), 'text-black': Menus.Product || Menus.Mundo, 'text-white': !(Menus.Product || Menus.Mundo)}">
+        Comienza tus compras
+      </button>
+      <nav class="hidden md:flex space-x-6 text-gray-700 font-medium left-1/2">
+      </nav>
+      <button (click)="SearchBar.Search = !SearchBar.Search" class="relative group p-1 rounded transition-all">
+        <svg *ngIf="!SearchBar.Search"
+          class="w-7 h-7 text-white transition-all duration-250 group-hover:stroke-green-400 group-hover:fill-green-400 cursor-pointer hover:scale-125"
+          [ngClass]="{'active': Menus.Product, 'text-black': Menus.Product || Menus.Mundo, 'text-white': !(Menus.Product || Menus.Mundo)}"
+          viewBox="0 0 57.231 57.231" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" stroke="transparent"
+          stroke-width="2">
+          <path d="M23.945,9.373c-1.652,0-2.992,1.341-2.992,2.992
+            c0,1.654,1.34,2.992,2.992,2.992c3.656,0,6.921,2.042,8.524,5.333
+            c0.519,1.062,1.583,1.68,2.691,1.68c0.441,0,0.888-0.097,1.309-0.303
+            c1.486-0.723,2.104-2.514,1.379-4.001C35.235,12.704,29.906,9.373,23.945,9.373z" />
+          <path d="M56.135,50.469l-9.971-9.972c2.952-4.152,4.705-9.213,4.705-14.685
+            c0-14.025-11.41-25.435-25.435-25.435S0,11.787,0,25.812
+            c0,14.024,11.409,25.434,25.434,25.434c5.859,0,11.245-2.01,15.549-5.351
+            l9.862,9.862c0.73,0.73,1.689,1.096,2.645,1.096
+            c0.958,0,1.915-0.365,2.645-1.096C57.596,54.298,57.596,51.93,56.135,50.469z
+            M5.986,25.813c0-10.725,8.726-19.45,19.45-19.45
+            s19.45,8.725,19.45,19.45c0,4.462-1.525,8.566-4.063,11.852
+            c-0.839,1.085-1.781,2.086-2.827,2.973
+            c-3.392,2.878-7.773,4.625-12.56,4.625C14.711,45.262,5.986,36.537,5.986,25.813z" />
+        </svg>
+      </button>
+      <div *ngIf="SearchBar.Search"
+        class="relative flex items-center justify-between px-3 right-0 top-0 origin-right scale-x-0 opacity-0 w-65 h-10 border-2 border-transparent hover:border-green-400 hover:scale-110 bg-gray-100 rounded-4xl shadow-xl transition-all duration-500"
+        [ngClass]="{
+          'scale-x-0 opacity-0 pointer-events-none': !SearchBar.Search,
+          'scale-x-100 opacity-100 pointer-events-auto': SearchBar.Search }"> <input type="text"
+          class="w-full h-full outline-none bg-transparent flex items-center text-gray-500 transition-all duration-500"
+          placeholder="Buscar" />
+        <svg class="w-6 h-6 text-black transition-all cursor-pointer justify-end hover:scale-110"
+          viewBox="0 0 57.231 57.231" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" stroke="transparent"
+          stroke-width="2">
+          <path d="M23.945,9.373c-1.652,0-2.992,1.341-2.992,2.992
+            c0,1.654,1.34,2.992,2.992,2.992c3.656,0,6.921,2.042,8.524,5.333
+            c0.519,1.062,1.583,1.68,2.691,1.68c0.441,0,0.888-0.097,1.309-0.303
+            c1.486-0.723,2.104-2.514,1.379-4.001C35.235,12.704,29.906,9.373,23.945,9.373z" />
+          <path d="M56.135,50.469l-9.971-9.972c2.952-4.152,4.705-9.213,4.705-14.685
+            c0-14.025-11.41-25.435-25.435-25.435S0,11.787,0,25.812
+            c0,14.024,11.409,25.434,25.434,25.434c5.859,0,11.245-2.01,15.549-5.351
+            l9.862,9.862c0.73,0.73,1.689,1.096,2.645,1.096
+            c0.958,0,1.915-0.365,2.645-1.096C57.596,54.298,57.596,51.93,56.135,50.469z
+            M5.986,25.813c0-10.725,8.726-19.45,19.45-19.45
+            s19.45,8.725,19.45,19.45c0,4.462-1.525,8.566-4.063,11.852
+            c-0.839,1.085-1.781,2.086-2.827,2.973
+            c-3.392,2.878-7.773,4.625-12.56,4.625C14.711,45.262,5.986,36.537,5.986,25.813z" />
+        </svg>
+      </div>
+      <button class="group p-1 rounded transition-all">
+        <svg
+          class="w-8 h-8 text-white transition-all duration-250 group-hover:stroke-green-400 cursor-pointer hover:scale-125"
+          [ngClass]="{'active': Menus.Product, 'text-black': Menus.Product || Menus.Mundo, 'text-white': !(Menus.Product || Menus.Mundo)}"
+          viewBox="0 0 57.231 57.231" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentcolor"
+          stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="32.6" cy="13" r="10" />
+          <path d="M15 50c0-11.5 8.6-20 18.6-20s18.6 8.5 18.6 20H20z" />
+        </svg>
+      </button>
+      <button class="group pr-5 rounded transition-all">
+        <svg
+          class="w-9.5 h-9.5 text-white transition-all duration-250 group-hover:stroke-green-400 cursor-pointer hover:scale-125"
+          [ngClass]="{'active': Menus.Product, 'text-black': Menus.Product || Menus.Mundo, 'text-white': !(Menus.Product || Menus.Mundo)}"
+          viewBox="0 0 57.231 57.231" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentcolor"
+          stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 12h6l4 18h20c3 0 5-2 6-5l2-10H18" />
+          <circle cx="22" cy="43" r="4" />
+          <circle cx="40" cy="43" r="4" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div *ngIf="Menus.Product || Menus.Mundo"
+  class="z-40 top-0 w-full h-full backdrop-blur-md opacity-  transition-all block fixed inset-0 duration-700"
+  tabindex="-1" (click)="closeAllMenus()" [ngClass]="{
+  'opacity-0 pointer-events-none': !(Menus.Product || Menus.Mundo),
+  'opacity-80 pointer-events-auto': (Menus.Product || Menus.Mundo)
+    }">
+</div>

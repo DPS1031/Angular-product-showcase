@@ -1,0 +1,30 @@
+.underline-hover::after{
+
+  content:"";
+  position: absolute;
+  inset-inline-start: 0%;
+  inset-block-end: -2px;
+  transform: translateX(0%);
+  inline-size: 0;
+  block-size: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+  opacity: 0;
+
+}
+
+.underline-hover.active::after{
+
+  inline-size: 100%;
+  opacity: 1;
+
+}
+
+.underline-hover:hover::after{
+
+  inline-size: 100%;
+  opacity: 1;
+
+}
+
+

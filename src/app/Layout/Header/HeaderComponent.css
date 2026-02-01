@@ -1,0 +1,39 @@
+.menu-label::after{
+
+  content:"";
+  position: absolute;
+  inset-inline-start: 50%;
+  inset-block-end: -2px;
+  transform: translateX(-50%);
+  inline-size: 0;
+  block-size: 2px;
+  background-color: currentColor;
+  transition: width 0.25s ease;
+  opacity: 0;
+
+}
+
+.menu-label.active::after{
+
+  inline-size: 100%;
+  opacity: 1;
+
+}
+
+.menu-label:hover::after{
+
+  inline-size: 100%;
+  opacity: 1;
+
+}
+
+.ranchers-regular {
+  font-family: "Ranchers", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 0 0 1px rgba(0,0,0,0.6);
+}
+
+
+
+
