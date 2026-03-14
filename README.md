@@ -81,12 +81,6 @@ The category list on the left acts as a **controller**:
 
 ---
 
-## 📸 Preview
-
-_(Add screenshots here if you want)_
-
----
-
 ## 📄 License
 
 This project is for educational and portfolio purposes.
